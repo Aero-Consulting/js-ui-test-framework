@@ -1,0 +1,37 @@
+version: '3.9'
+services:
+  codecept:
+    container_name: codecept
+    build:
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./allure-results/:/home/tests/allure-results
+    networks:
+      - ui
+
+  selenoid:
+    container_name: selenoid
+    image: aerokube/selenoid:latest
+    ports:
+      - "4444:4444"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./config/:/etc/selenoid/:ro
+    command:
+      -service-startup-timeout 2m
+      -container-network ui
+    networks:
+      - ui
+
+  selenoid-ui:
+    container_name: selenoid-ui
+    image: aerokube/selenoid-ui:latest
+    command: --selenoid-uri http://selenoid:4444
+    ports:
+      - 8080:8080
+    networks:
+      - ui
+
+networks:
+  ui:
+    name: ui
