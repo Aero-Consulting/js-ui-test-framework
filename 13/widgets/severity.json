@@ -1,0 +1,1 @@
+[{"uid":"f220b2b771e1f951","name":"Поиск на главной страницы Google","time":{"start":1663072399216,"stop":1663072403630,"duration":4414},"status":"passed","severity":"normal"},{"uid":"8753f951477dab40","name":"Дудл Google","time":{"start":1663072403688,"stop":1663072406757,"duration":3069},"status":"passed","severity":"normal"}]
