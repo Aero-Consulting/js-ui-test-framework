@@ -1,0 +1,3 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Mon Dec 12 23:09:42 GMT 2022","Mon Dec 12 23:09:47 GMT 2022","4198","","Google:","","Google:","Поиск на главной страницы Google","Поиск на главной страницы Google",""
+"passed","Mon Dec 12 23:09:47 GMT 2022","Mon Dec 12 23:09:49 GMT 2022","2721","","Google:","","Google:","Дудл Google","Дудл Google",""
